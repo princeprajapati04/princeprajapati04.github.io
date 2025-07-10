@@ -1,31 +1,43 @@
+/* ===== GENERAL STYLES ===== */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
 }
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-section {
-    padding: 20px;
-    margin: 10px auto;
-    max-width: 800px;
-    background: #fff;
-    border-radius: 5px;
-}
-ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
+
 a {
-    color: #0066cc;
+  color: #0066cc;
+  text-decoration: none;
 }
+
+/* ===== HEADER ===== */
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== LIST STYLING ===== */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
   display: flex;
   justify-content: center;
@@ -41,13 +53,13 @@ a {
   margin-bottom: 10px;
 }
 
-.highlight {
-  color: #0077cc;
-}
-
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
+}
+
+.highlight {
+  color: #0077cc;
 }
 
 .hero-links {
@@ -56,6 +68,7 @@ a {
   gap: 15px;
 }
 
+/* ===== BUTTON STYLES ===== */
 .btn,
 .btn-outline {
   padding: 10px 20px;
@@ -82,4 +95,10 @@ a {
 .btn-outline:hover {
   background-color: #0077cc;
   color: #fff;
+}
+
+/* ===== CONTACT SECTION (Optional Enhancement) ===== */
+#contact p {
+  margin: 8px 0;
+  font-size: 1rem;
 }
