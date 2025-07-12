@@ -29,21 +29,13 @@ function toggleDarkMode() {
 function updateDarkModeIcon(isDark) {
   const icon = document.getElementById('dark-mode-icon');
   if (!icon) return;
-
   icon.classList.remove('fa-moon', 'fa-sun');
   icon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
 }
 
-// 🚀 Apply dark mode preference on page load
+// 🚀 Rocket Launch + Hero Reveal + Mobile Menu Logic
 window.addEventListener('DOMContentLoaded', () => {
-  const prefersDark = localStorage.getItem('dark-mode') === 'true';
-  if (prefersDark) {
-    document.body.classList.add('dark-mode');
-  }
-  updateDarkModeIcon(prefersDark);
-});
-// 🚀 Rocket Launch + Hero Reveal
-window.addEventListener('DOMContentLoaded', () => {
+  // Rocket Animation
   const rocket = document.getElementById('rocket');
   const smoke = document.getElementById('smoke');
   const heroContent = document.getElementById('hero-content');
@@ -52,23 +44,28 @@ window.addEventListener('DOMContentLoaded', () => {
     rocket.addEventListener('click', () => {
       rocket.classList.add('launching');
       smoke.classList.add('smoke-active');
-
       setTimeout(() => {
         heroContent.style.opacity = 1;
         heroContent.style.transition = 'opacity 1s ease-in';
       }, 2000);
     });
   }
-});
-// Mobile menu toggle
-const hamburger = document.getElementById('hamburger');
-const mobileOverlay = document.getElementById('mobileOverlay');
-const closeBtn = document.getElementById('closeBtn');
 
-hamburger.addEventListener('click', () => {
-  mobileOverlay.classList.add('active');
-});
+  // ✅ Mobile Menu Toggle (FIXED)
+  const hamburger = document.getElementById('hamburger');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('closeBtn');
 
-closeBtn.addEventListener('click', () => {
-  mobileOverlay.classList.remove('active');
-});
+  if (hamburger && mobileOverlay && closeBtn) {
+    hamburger.addEventListener('click', () => {
+      mobileOverlay.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileOverlay.classList.remove('active');
+    });
+
+    // Close menu when any link is clicked
+    document.querySelectorAll('.mobile-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileOverlay.classList.re
