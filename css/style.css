@@ -217,9 +217,21 @@ section {
 }
 
 /* ===== CONTACT SECTION ===== */
-#contact i {
-  margin-right: 10px;
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.contact-icons a {
   color: #0077cc;
+  transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #005fa3;
 }
 
 /* ===== RESPONSIVE NAVBAR (MOBILE) ===== */
@@ -253,7 +265,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* DARK MODE (handled by JS toggle) */
+/* ===== DARK MODE ===== */
 body.dark-mode {
   background: #121212;
   color: #f4f4f4;
@@ -285,7 +297,7 @@ body.dark-mode .btn-outline:hover {
   color: white;
 }
 
-/* Progress Bar */
+/* ===== PROGRESS BAR ===== */
 #progress-bar {
   position: fixed;
   top: 0;
@@ -297,7 +309,7 @@ body.dark-mode .btn-outline:hover {
   transition: width 0.25s ease-out;
 }
 
-/* Preloader */
+/* ===== PRELOADER ===== */
 #preloader {
   position: fixed;
   top: 0;
@@ -325,16 +337,15 @@ body.dark-mode .btn-outline:hover {
   100% { transform: rotate(360deg); }
 }
 
-/* Dark Mode Toggle Button */
+/* ===== DARK MODE ICON BUTTON ===== */
 .dark-mode-toggle {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: #444;
-  color: #fff;
+  background: none;
+  color: #0077cc;
+  font-size: 24px;
   border: none;
-  padding: 10px 15px;
   cursor: pointer;
   z-index: 1000;
-  border-radius: 5px;
 }
