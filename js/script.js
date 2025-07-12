@@ -25,8 +25,10 @@ function toggleDarkMode() {
   updateDarkModeIcon(isDark);
 }
 
-// 🌓 Update toggle icon
 function updateDarkModeIcon(isDark) {
   const icon = document.getElementById('dark-mode-icon');
-  if (icon) icon.textContent = isDark ? '🌞' : '🌜';
+  if (!icon) return;
+
+  icon.classList.remove(isDark ? 'fa-moon' : 'fa-sun');
+  icon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
 }
