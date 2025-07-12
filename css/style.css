@@ -527,7 +527,8 @@ body.dark-mode .contact-form button:hover {
   cursor: pointer;
   z-index: 1000;              /* ← Higher priority */
   display: block;
-  margin: 0 auto;
+   margin-left: auto;
+  margin-right: auto; /* Ensures centering in flexbox */
   position: relative;         /* ← Needed for z-index to take effect */
   pointer-events: auto;       /* ← Ensures it's clickable */
 }
