@@ -414,3 +414,26 @@ body.dark-mode .btn-outline:hover {
   background-color: #00bfff;
   color: white;
 }
+/* ===== GET IN TOUCH FORM ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  width: fit-content;
+  align-self: center;
+}
