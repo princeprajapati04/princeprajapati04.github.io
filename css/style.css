@@ -43,7 +43,6 @@ h2 {
   color: white;
 }
 
-/* Main nav links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -61,7 +60,6 @@ h2 {
   color: #00bfff;
 }
 
-/* Hamburger menu */
 .hamburger {
   display: none;
   font-size: 26px;
@@ -191,6 +189,48 @@ section {
   border-radius: 4px;
   text-align: center;
   font-weight: bold;
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.timeline {
+  border-left: 3px solid #0077cc;
+  margin-left: 20px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #0077cc;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item h3 {
+  margin: 0;
+  color: #0077cc;
+}
+
+.timeline-item h4 {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.timeline-item p {
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+  color: #333;
 }
 
 /* ===== CONTACT SECTION ===== */
