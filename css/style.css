@@ -349,3 +349,68 @@ body.dark-mode .btn-outline:hover {
   cursor: pointer;
   z-index: 1000;
 }
+/* ===== DARK MODE FULL FIX ===== */
+
+/* Main section background */
+body.dark-mode section,
+body.dark-mode .hero {
+  background-color: #1a1a1a;
+}
+
+/* Headings and paragraph text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li {
+  color: #f4f4f4;
+}
+
+/* Navbar text */
+body.dark-mode .logo,
+body.dark-mode .nav-links li a {
+  color: #f4f4f4;
+}
+
+/* Contact Icons */
+body.dark-mode #contact i {
+  color: #00bfff;
+}
+
+/* Skill box background */
+body.dark-mode .skills-grid li {
+  background-color: #2a2a2a;
+}
+
+/* Project Cards */
+body.dark-mode .project-card {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+/* Experience Cards */
+body.dark-mode .experience-card {
+  background-color: #2a2a2a;
+  border-color: #00bfff;
+}
+
+/* Resume Button */
+body.dark-mode .btn {
+  background-color: #00bfff;
+  color: #fff;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #0099e6;
+}
+
+/* Outline Button */
+body.dark-mode .btn-outline {
+  border-color: #00bfff;
+  color: #00bfff;
+}
+
+body.dark-mode .btn-outline:hover {
+  background-color: #00bfff;
+  color: white;
+}
