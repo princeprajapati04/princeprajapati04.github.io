@@ -478,20 +478,31 @@ body.dark-mode .contact-form button {
 body.dark-mode .contact-form button:hover {
   background-color: #0099e6;
 }
+/* ===== HERO SECTION FIXED ===== */
+.hero {
+  padding: 0;         /* Removed extra padding */
+  margin: 0;
+  text-align: center;
+  background-color: #ffffff;
+}
+
 /* ===== ROCKET LAUNCH HERO ANIMATION ===== */
 .rocket-launch {
   position: relative;
   height: 100vh;
+  width: 100vw;        /* Full width to center content */
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f4f4f4;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .rocket {
-  width: 300px; /* Adjust as needed */
-  max-width: 80vw; /* Makes it responsive */
+  width: 300px;        /* Adjust size as needed */
+  max-width: 80vw;     /* Responsive sizing */
   height: auto;
   transition: transform 2s ease-in;
   cursor: pointer;
@@ -499,6 +510,7 @@ body.dark-mode .contact-form button:hover {
   display: block;
   margin: 0 auto;
 }
+
 .smoke {
   position: absolute;
   bottom: 0;
@@ -510,7 +522,15 @@ body.dark-mode .contact-form button:hover {
   z-index: 1;
 }
 
-/* Smoke puff effect */
+/* ===== ROCKET LAUNCH EFFECT ===== */
+.launching {
+  transform: translateY(-600px);
+}
+
+.smoke-active {
+  animation: smokeRise 2s ease-out forwards;
+}
+
 @keyframes smokeRise {
   0% {
     opacity: 0.5;
@@ -522,13 +542,9 @@ body.dark-mode .contact-form button:hover {
   }
 }
 
-/* Rocket launch effect */
-.launching {
-  transform: translateY(-600px);
-}
-
-.smoke-active {
-  animation: smokeRise 2s ease-out forwards;
+/* ===== DARK MODE SUPPORT FOR ROCKET BACKGROUND ===== */
+body.dark-mode .rocket-launch {
+  background-color: #121212;
 }
 
 
