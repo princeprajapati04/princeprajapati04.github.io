@@ -84,13 +84,14 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw;              /* NEW */
-  max-width: 100%;           /* NEW */
-  padding: 0 20px;           /* NEW: mobile spacing */
+  width: 100vw;
+  max-width: 100%;
+  padding: 0 20px;
   text-align: center;
   opacity: 0;
   z-index: 10;
   transition: opacity 1s ease-in-out;
+  pointer-events: none; /* Prevents blocking clicks on rocket */
 }
 @media (max-width: 768px) {
   .hero-content h1 {
@@ -109,6 +110,7 @@ h2 {
 
 .hero-content.show {
   opacity: 1;
+  pointer-events: auto; /* Allows interactions once content is shown */
 }
 
 .hero-content h1 {
@@ -523,9 +525,11 @@ body.dark-mode .contact-form button:hover {
   height: auto;
   transition: transform 2s ease-in;
   cursor: pointer;
-  z-index: 2;
+  z-index: 1000;              /* ← Higher priority */
   display: block;
   margin: 0 auto;
+  position: relative;         /* ← Needed for z-index to take effect */
+  pointer-events: auto;       /* ← Ensures it's clickable */
 }
 
 .smoke {
