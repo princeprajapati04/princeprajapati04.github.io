@@ -73,34 +73,50 @@ h2 {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 20px;
+  padding: 0;
+  margin: 0;
   text-align: center;
   background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 1s ease-in-out;
 }
 
-.hero p {
+.hero-content.show {
+  opacity: 1;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.hero-content .btn {
+  padding: 1.25rem 2.5rem;
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  background: #00bfff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
-.highlight {
-  color: #0077cc;
-}
-
-.hero-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+.hero-content .btn:hover {
+  background: #0095cc;
 }
 
 /* ===== BUTTON STYLES ===== */
@@ -349,15 +365,13 @@ body.dark-mode .btn-outline:hover {
   cursor: pointer;
   z-index: 1000;
 }
-/* ===== DARK MODE FULL FIX ===== */
 
-/* Main section background */
+/* ===== DARK MODE FULL FIX ===== */
 body.dark-mode section,
 body.dark-mode .hero {
   background-color: #1a1a1a;
 }
 
-/* Headings and paragraph text */
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
@@ -366,35 +380,29 @@ body.dark-mode li {
   color: #f4f4f4;
 }
 
-/* Navbar text */
 body.dark-mode .logo,
 body.dark-mode .nav-links li a {
   color: #f4f4f4;
 }
 
-/* Contact Icons */
 body.dark-mode #contact i {
   color: #00bfff;
 }
 
-/* Skill box background */
 body.dark-mode .skills-grid li {
   background-color: #2a2a2a;
 }
 
-/* Project Cards */
 body.dark-mode .project-card {
   background-color: #2a2a2a;
   border-color: #444;
 }
 
-/* Experience Cards */
 body.dark-mode .experience-card {
   background-color: #2a2a2a;
   border-color: #00bfff;
 }
 
-/* Resume Button */
 body.dark-mode .btn {
   background-color: #00bfff;
   color: #fff;
@@ -404,7 +412,6 @@ body.dark-mode .btn:hover {
   background-color: #0099e6;
 }
 
-/* Outline Button */
 body.dark-mode .btn-outline {
   border-color: #00bfff;
   color: #00bfff;
@@ -414,6 +421,7 @@ body.dark-mode .btn-outline:hover {
   background-color: #00bfff;
   color: white;
 }
+
 /* ===== CONTACT FORM STYLING ===== */
 .contact-form {
   display: flex;
@@ -457,7 +465,6 @@ body.dark-mode .btn-outline:hover {
   background-color: #005fa3;
 }
 
-/* ===== DARK MODE FOR FORM ===== */
 body.dark-mode .contact-form input,
 body.dark-mode .contact-form textarea {
   background-color: #2a2a2a;
@@ -478,19 +485,12 @@ body.dark-mode .contact-form button {
 body.dark-mode .contact-form button:hover {
   background-color: #0099e6;
 }
-/* ===== HERO SECTION FIXED ===== */
-.hero {
-  padding: 0;         /* Removed extra padding */
-  margin: 0;
-  text-align: center;
-  background-color: #ffffff;
-}
 
 /* ===== ROCKET LAUNCH HERO ANIMATION ===== */
 .rocket-launch {
   position: relative;
   height: 100vh;
-  width: 100vw;        /* Full width to center content */
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -501,8 +501,8 @@ body.dark-mode .contact-form button:hover {
 }
 
 .rocket {
-  width: 300px;        /* Adjust size as needed */
-  max-width: 80vw;     /* Responsive sizing */
+  width: 300px;
+  max-width: 80vw;
   height: auto;
   transition: transform 2s ease-in;
   cursor: pointer;
@@ -522,7 +522,6 @@ body.dark-mode .contact-form button:hover {
   z-index: 1;
 }
 
-/* ===== ROCKET LAUNCH EFFECT ===== */
 .launching {
   transform: translateY(-600px);
 }
@@ -542,10 +541,6 @@ body.dark-mode .contact-form button:hover {
   }
 }
 
-/* ===== DARK MODE SUPPORT FOR ROCKET BACKGROUND ===== */
 body.dark-mode .rocket-launch {
   background-color: #121212;
 }
-
-
-
