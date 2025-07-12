@@ -6,72 +6,49 @@
   <title>Prince Prajapati - Mechanical Engineering Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-
+  <script defer src="js/script.js"></script>
   <style>
+    /* Inline styles for loader, progress bar, and dark mode toggle */
     #preloader {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0; width: 100%; height: 100%;
       background-color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       z-index: 10000;
     }
     #preloader .loader {
       border: 5px solid #f3f3f3;
       border-top: 5px solid #0077cc;
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      width: 50px; height: 50px;
       animation: spin 1s linear infinite;
     }
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
     #progress-bar {
       position: fixed;
-      top: 0;
-      left: 0;
-      height: 5px;
+      top: 0; left: 0;
+      height: 5px; width: 0%;
       background: #0077cc;
-      width: 0%;
       z-index: 9999;
       transition: width 0.25s ease-out;
     }
-
     .dark-mode-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #444;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      z-index: 1000;
+      position: fixed; top: 20px; right: 20px;
+      background: #444; color: #fff;
+      border: none; padding: 10px 15px;
+      cursor: pointer; z-index: 1000;
       border-radius: 5px;
     }
-
-    body.dark-mode {
-      background: #121212;
-      color: #f4f4f4;
-    }
-    body.dark-mode section {
-      background: #1e1e1e;
-    }
-    body.dark-mode .navbar {
-      background-color: #1a1a1a;
-    }
+    body.dark-mode { background: #121212; color: #f4f4f4; }
+    body.dark-mode section { background: #1e1e1e; }
+    body.dark-mode .navbar { background-color: #1a1a1a; }
     body.dark-mode .nav-links li a:hover,
     body.dark-mode .highlight,
     body.dark-mode .btn,
-    body.dark-mode .project-card h3,
-    body.dark-mode .timeline-item h3 {
+    body.dark-mode .project-card h3 {
       color: #00bfff !important;
     }
     body.dark-mode .btn-outline {
@@ -85,13 +62,8 @@
   </style>
 </head>
 <body>
-
-  <div id="preloader">
-    <div class="loader"></div>
-  </div>
-
+  <div id="preloader"><div class="loader"></div></div>
   <div id="progress-bar"></div>
-
   <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
   <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
@@ -123,86 +95,121 @@
     </div>
   </header>
 
+  <section id="about" data-aos="fade-up" data-aos-duration="1000">
+    <h2>About Me</h2>
+    <p>
+      I am a third-year Mechanical Engineering student at the University of Cincinnati with minors in Mathematics and Insurance and Risk Management. Passionate about design, automation, and real-world engineering challenges. I've completed internships in medical device, construction, and aerospace sectors, and contributed to drone and injector system designs. I also work as a Chemistry TA and a student worker in the BME department.
+    </p>
+  </section>
+
+  <section id="projects" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Design of Injector Assembly</h3>
+        <p>Created a 3D-printed housing for a medical injector using SolidWorks. Validated design with FEA.</p>
+        <p><strong>Tools:</strong> SolidWorks, ANSYS</p>
+      </div>
+      <div class="project-card">
+        <h3>Autonomous Drone Navigation</h3>
+        <p>Simulated obstacle detection and route planning using LIDAR and ROS in Python.</p>
+        <p><strong>Tools:</strong> Python, ROS</p>
+      </div>
+      <div class="project-card">
+        <h3>Heat Exchanger Modeling</h3>
+        <p>Built a dynamic MATLAB model to optimize heat exchange system performance under varying inputs.</p>
+        <p><strong>Tools:</strong> MATLAB, Excel</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Skills</h2>
+    <ul class="skills-grid">
+      <li>Python</li><li>MATLAB</li><li>LabVIEW</li><li>SolidWorks</li>
+      <li>Fusion 360</li><li>ANSYS</li><li>AutoCAD</li><li>GD&T</li>
+    </ul>
+  </section>
+
   <section id="experience" data-aos="fade-up" data-aos-duration="1000">
     <h2>Experience</h2>
-
-    <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="experience-card" data-aos-delay="100">
       <h3>Mechanical Engineering Intern</h3>
-      <div class="company">ISRO - Indian Space Research Organization</div>
+      <div class="company">ISRO</div>
       <div class="date-location">Jun 2025 – Present | Ahmedabad, India</div>
       <ul>
-        <li>Working on engineering projects under the propulsion systems division.</li>
-        <li>Assisting in CAD modeling and test setup for space-bound components.</li>
+        <li>Worked on propulsion systems engineering projects.</li>
+        <li>CAD modeling and testing setup for aerospace components.</li>
       </ul>
     </div>
-
-    <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="experience-card" data-aos-delay="200">
       <h3>BME Student Worker</h3>
       <div class="company">University of Cincinnati</div>
       <div class="date-location">Jan 2025 – Present | Cincinnati, OH</div>
       <ul>
-        <li>Supported research and lab operations for 100+ students/faculty.</li>
-        <li>Managed equipment documentation and inventory across 10+ labs.</li>
+        <li>Maintained research lab equipment for 100+ users.</li>
+        <li>Oversaw inventory and helped in setup for research labs.</li>
       </ul>
     </div>
-
-    <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+    <div class="experience-card" data-aos-delay="300">
       <h3>Chemistry Lab Teaching Assistant</h3>
       <div class="company">University of Cincinnati</div>
       <div class="date-location">Jan 2025 – May 2025 | Cincinnati, OH</div>
       <ul>
-        <li>Guided 20+ students through lab experiments and safety procedures.</li>
-        <li>Graded 100+ reports, improving student scores by 15%.</li>
+        <li>Guided lab experiments and graded lab reports.</li>
+        <li>Ensured safety and compliance in all sessions.</li>
       </ul>
     </div>
-
-    <div class="experience-card" data-aos="fade-up" data-aos-delay="400">
+    <div class="experience-card" data-aos-delay="400">
       <h3>Mechanical Engineering Intern</h3>
       <div class="company">Guerbet</div>
       <div class="date-location">Aug 2024 – Dec 2024 | Cincinnati, OH</div>
       <ul>
-        <li>Designed injector components and PCB enclosures in SolidWorks.</li>
-        <li>Created and managed ECOs/MCOs across departments.</li>
+        <li>Designed enclosures and maintained engineering change orders.</li>
+        <li>Cross-functional collaboration across teams.</li>
       </ul>
     </div>
-
-    <div class="experience-card" data-aos="fade-up" data-aos-delay="500">
+    <div class="experience-card" data-aos-delay="500">
       <h3>Process Engineering Intern</h3>
-      <div class="company">Tremco Commercial Sealants & Waterproofing</div>
+      <div class="company">Tremco</div>
       <div class="date-location">Jan 2024 – Apr 2024 | Cleveland, OH</div>
       <ul>
-        <li>Developed P&IDs for OSHA compliance and tested production processes.</li>
-        <li>Helped improve process time efficiency by 10%.</li>
+        <li>Developed process diagrams for OSHA compliance.</li>
+        <li>Optimized production processes by 10% efficiency.</li>
       </ul>
     </div>
-
-    <div class="experience-card" data-aos="fade-up" data-aos-delay="600">
+    <div class="experience-card" data-aos-delay="600">
       <h3>Engineer Intern</h3>
       <div class="company">Prime UAV</div>
       <div class="date-location">Jul 2023 | Gujarat, India</div>
       <ul>
-        <li>Designed drone parts using SolidWorks and AutoCAD.</li>
-        <li>Improved prototype accuracy through simulation and modeling.</li>
+        <li>CAD modeling for UAV components and prototype testing.</li>
       </ul>
     </div>
-
-    <div class="experience-card" data-aos="fade-up" data-aos-delay="700">
+    <div class="experience-card" data-aos-delay="700">
       <h3>Desk Assistant</h3>
       <div class="company">University of Cincinnati</div>
       <div class="date-location">Aug 2023 – Aug 2024 | Cincinnati, OH</div>
       <ul>
-        <li>Provided front-desk support and managed residential safety protocols.</li>
-        <li>Responded to emergencies and collaborated with RAs for community support.</li>
+        <li>Supported residential services and enforced safety protocols.</li>
       </ul>
     </div>
   </section>
 
-  <!-- AOS and Custom Scripts -->
+  <section id="resume" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Resume</h2>
+    <a href="assets/pdf/resume.pdf" class="btn" download>Download Resume</a>
+  </section>
+
+  <section id="contact" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Contact</h2>
+    <p><strong>Phone:</strong> +1 (513) 430 6552</p>
+    <p><strong>Email:</strong> 004princeprajapati@gmail.com</p>
+  </section>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init({ once: true });
   </script>
-  <script defer src="js/script.js"></script>
-
 </body>
 </html>
