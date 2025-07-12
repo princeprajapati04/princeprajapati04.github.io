@@ -84,10 +84,27 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100vw;              /* NEW */
+  max-width: 100%;           /* NEW */
+  padding: 0 20px;           /* NEW: mobile spacing */
   text-align: center;
   opacity: 0;
   z-index: 10;
   transition: opacity 1s ease-in-out;
+}
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-content .btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
 }
 
 .hero-content.show {
