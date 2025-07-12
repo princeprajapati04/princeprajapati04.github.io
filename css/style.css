@@ -490,7 +490,7 @@ body.dark-mode .contact-form button:hover {
 }
 
 .rocket {
-  width: 180px; /* Increased size */
+  width: 400px; /* Increased size */
   height: auto;
   transition: transform 2s ease-in;
   cursor: pointer;
