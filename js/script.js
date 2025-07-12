@@ -68,4 +68,6 @@ window.addEventListener('DOMContentLoaded', () => {
     // Close menu when any link is clicked
     document.querySelectorAll('.mobile-links a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileOverlay.classList.re
+        mobileOverlay.classList.remove('active');
+  });
+});
