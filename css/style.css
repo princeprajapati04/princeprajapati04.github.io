@@ -509,7 +509,7 @@ body.dark-mode .contact-form button:hover {
 .rocket-launch {
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
