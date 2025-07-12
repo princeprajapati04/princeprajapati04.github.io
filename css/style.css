@@ -562,3 +562,79 @@ body.dark-mode .contact-form button:hover {
 body.dark-mode .rocket-launch {
   background-color: #121212;
 }
+/* ===== CUSTOM NAVIGATION: DESKTOP vs MOBILE ===== */
+.nav-desktop .nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+.nav-desktop .nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.nav-desktop .nav-links li a:hover {
+  color: #00bfff;
+}
+
+/* Show hamburger only on mobile */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  z-index: 1001;
+}
+
+/* Overlay for mobile menu */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+}
+
+.mobile-overlay.active {
+  display: flex;
+}
+
+.mobile-links a {
+  color: white;
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.mobile-links a:hover {
+  color: #00bfff;
+}
+
+/* Close button inside mobile menu */
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Hide desktop nav on small screens, show hamburger */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
