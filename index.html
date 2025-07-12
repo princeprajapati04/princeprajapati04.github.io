@@ -1,70 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prince Prajapati - Mechanical Engineering Portfolio</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <script defer src="js/script.js"></script>
-  <style>
-    /* Inline styles for loader, progress bar, and dark mode toggle */
-    #preloader {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background-color: #ffffff;
-      display: flex; align-items: center; justify-content: center;
-      z-index: 10000;
-    }
-    #preloader .loader {
-      border: 5px solid #f3f3f3;
-      border-top: 5px solid #0077cc;
-      border-radius: 50%;
-      width: 50px; height: 50px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    #progress-bar {
-      position: fixed;
-      top: 0; left: 0;
-      height: 5px; width: 0%;
-      background: #0077cc;
-      z-index: 9999;
-      transition: width 0.25s ease-out;
-    }
-    .dark-mode-toggle {
-      position: fixed; top: 20px; right: 20px;
-      background: #444; color: #fff;
-      border: none; padding: 10px 15px;
-      cursor: pointer; z-index: 1000;
-      border-radius: 5px;
-    }
-    body.dark-mode { background: #121212; color: #f4f4f4; }
-    body.dark-mode section { background: #1e1e1e; }
-    body.dark-mode .navbar { background-color: #1a1a1a; }
-    body.dark-mode .nav-links li a:hover,
-    body.dark-mode .highlight,
-    body.dark-mode .btn,
-    body.dark-mode .project-card h3 {
-      color: #00bfff !important;
-    }
-    body.dark-mode .btn-outline {
-      border-color: #00bfff;
-      color: #00bfff;
-    }
-    body.dark-mode .btn-outline:hover {
-      background: #00bfff;
-      color: white;
-    }
-  </style>
 </head>
+
 <body>
   <div id="preloader"><div class="loader"></div></div>
   <div id="progress-bar"></div>
-  <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <i id="dark-icon" class="fas fa-moon"></i>
+  </button>
 
   <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
     <div class="nav-container">
@@ -203,8 +157,12 @@
 
   <section id="contact" data-aos="fade-up" data-aos-duration="1000">
     <h2>Contact</h2>
-    <p><strong>Phone:</strong> +1 (513) 430 6552</p>
-    <p><strong>Email:</strong> 004princeprajapati@gmail.com</p>
+    <div class="contact-icons">
+      <a href="mailto:004princeprajapati@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/prince-prajapati-486727255/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/princeprajapati04" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/_.prince04/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -212,4 +170,5 @@
     AOS.init({ once: true });
   </script>
 </body>
+
 </html>
