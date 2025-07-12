@@ -1,7 +1,29 @@
+/* ===== GENERAL STYLES ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+h2 {
+  margin-top: 0;
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
   background-color: #333;
   color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
   padding: 10px 0;
 }
 
@@ -18,8 +40,10 @@
 .logo {
   font-size: 20px;
   font-weight: bold;
+  color: white;
 }
 
+/* Main nav links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -29,20 +53,153 @@
 .nav-links li a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
+.nav-links li a:hover {
+  color: #00bfff;
+}
+
+/* Hamburger menu */
 .hamburger {
   display: none;
   font-size: 26px;
   cursor: pointer;
+  color: white;
 }
 
 #menu-toggle {
   display: none;
 }
 
-/* Mobile Styles */
+/* ===== HERO SECTION ===== */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: #0077cc;
+}
+
+.hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn,
+.btn-outline {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+.btn-outline {
+  border: 2px solid #0077cc;
+  color: #0077cc;
+}
+
+.btn-outline:hover {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== PROJECTS SECTION ===== */
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-grid li {
+  background: #e6f0fa;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ===== CONTACT SECTION ===== */
+#contact i {
+  margin-right: 10px;
+  color: #0077cc;
+}
+
+/* ===== RESPONSIVE NAVBAR (MOBILE) ===== */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -68,7 +225,7 @@
   }
 }
 
-/* Optional: Smooth scroll */
+/* ===== SMOOTH SCROLL ===== */
 html {
   scroll-behavior: smooth;
 }
