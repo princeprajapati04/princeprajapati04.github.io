@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ✅ Mobile Menu Toggle (FIXED)
+  // ✅ Mobile Menu Toggle
   const hamburger = document.getElementById('hamburger');
   const mobileOverlay = document.getElementById('mobileOverlay');
   const closeBtn = document.getElementById('closeBtn');
@@ -65,9 +65,11 @@ window.addEventListener('DOMContentLoaded', () => {
       mobileOverlay.classList.remove('active');
     });
 
-    // Close menu when any link is clicked
+    // ✅ Close menu when any link is clicked
     document.querySelectorAll('.mobile-links a').forEach(link => {
       link.addEventListener('click', () => {
         mobileOverlay.classList.remove('active');
-  });
+      });
+    });
+  }
 });
