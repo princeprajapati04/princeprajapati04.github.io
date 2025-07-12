@@ -60,4 +60,15 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const mobileOverlay = document.getElementById('mobileOverlay');
+const closeBtn = document.getElementById('closeBtn');
 
+hamburger.addEventListener('click', () => {
+  mobileOverlay.classList.add('active');
+});
+
+closeBtn.addEventListener('click', () => {
+  mobileOverlay.classList.remove('active');
+});
