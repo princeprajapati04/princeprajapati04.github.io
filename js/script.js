@@ -42,18 +42,22 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   updateDarkModeIcon(prefersDark);
 });
-// 🚀 Rocket launch interaction
-const rocket = document.getElementById('rocket');
-const smoke = document.getElementById('smoke');
-const heroContent = document.getElementById('hero-content');
+// 🚀 Rocket Launch + Hero Reveal
+window.addEventListener('DOMContentLoaded', () => {
+  const rocket = document.getElementById('rocket');
+  const smoke = document.getElementById('smoke');
+  const heroContent = document.getElementById('hero-content');
 
-rocket.addEventListener('click', () => {
-  rocket.classList.add('launching');
-  smoke.classList.add('smoke-active');
+  if (rocket && smoke && heroContent) {
+    rocket.addEventListener('click', () => {
+      rocket.classList.add('launching');
+      smoke.classList.add('smoke-active');
 
-  setTimeout(() => {
-    heroContent.style.opacity = 1;
-    heroContent.style.transition = 'opacity 1s ease-in';
-  }, 2000);
+      setTimeout(() => {
+        heroContent.style.opacity = 1;
+        heroContent.style.transition = 'opacity 1s ease-in';
+      }, 2000);
+    });
+  }
 });
 
