@@ -485,16 +485,19 @@ body.dark-mode .contact-form button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f4f4f4; /* Optional: light background */
+  background: #f4f4f4;
   overflow: hidden;
 }
 
 .rocket {
-  width: 400px; /* Increased size */
+  width: 300px; /* Adjust as needed */
+  max-width: 80vw; /* Makes it responsive */
   height: auto;
   transition: transform 2s ease-in;
   cursor: pointer;
   z-index: 2;
+  display: block;
+  margin: 0 auto;
 }
 .smoke {
   position: absolute;
