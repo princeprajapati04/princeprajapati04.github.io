@@ -1,82 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Prince Prajapati - Mechanical Engineering Portfolio</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<header>
-			<h1>Prince Prajapati</h1>
-			<p>Mechanical Engineering Student | Mechanical Engineering + Math @UC | ME INTERN @ISRO | EX-ME INTERN @GUERBET | EX-Process Engineering INTERN @TREMCO | TA-CHEM LAB | Student Worker-BME</p>
-		</header>
-		<section class="hero">
-			<div class="hero-content">
-				<h1>Hi, I'm <span class="highlight">Prince Prajapati</span></h1>
-				<p>Mechanical Engineering Student • Designer • Problem Solver</p>
-				<div class="hero-links">
-					<a href="pdf/resume.pdf" class="btn" download>Download Resume</a>
-					<a href="https://www.linkedin.com/in/prince-prajapati-486727255/" class="btn-outline" target="_blank">LinkedIn</a>
-				</div>
-			</div>
-		</section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prince Prajapati - Mechanical Engineering Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
 
-		<section id="about">
-			<h2>About Me</h2>
-			<p>
-				I am a third-year Mechanical Engineering student at the University of Cincinnati with minors in Mathematics and Insurance and Risk Management. I am passionate about applying engineering principles to real-world challenges,
-				especially in design, manufacturing, and automation. I have gained hands-on experience through internships in the medical device, construction materials, and drone technology industries. My work includes designing injector
-				components and PCB enclosures using SolidWorks, developing detailed P&IDs to support process safety, and contributing to drone component designs using CAD tools. In addition to my technical experience, I have worked on
-				campus as a Desk Assistant and BME student worker, where I developed strong communication, organization, and problem-solving skills. I also support student learning as a Chemistry Teaching Assistant and a math and science
-				tutor. I enjoy combining creativity and technical skills to develop meaningful solutions and am always open to connecting with professionals in engineering and related fields.
-			</p>
-		</section>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-		<section id="projects">
-		  <h2>Projects</h2>
-		  <div class="projects-container">
-		    <div class="project-card">
-		      <h3>Design of Injector Assembly</h3>
-		      <p>Designed a medical injector housing using SolidWorks and GD&T. Optimized design for 3D printing and FEA validation.</p>
-		      <p><strong>Tools:</strong> SolidWorks, ANSYS</p>
-		    </div>
-		
-		    <div class="project-card">
-		      <h3>Autonomous Drone Navigation</h3>
-		      <p>Developed a simulation for drone obstacle avoidance and mapping using LIDAR and Python control scripts.</p>
-		      <p><strong>Tools:</strong> Python, ROS</p>
-		    </div>
-		
-		    <div class="project-card">
-		      <h3>Heat Exchanger Performance Modeling</h3>
-		      <p>Built MATLAB model to simulate heat exchanger efficiency under variable fluid conditions for process safety.</p>
-		      <p><strong>Tools:</strong> MATLAB, Excel</p>
-		    </div>
-		  </div>
-		</section>
+  <!-- Header -->
+  <header>
+    <h1>Prince Prajapati</h1>
+    <p>
+      Mechanical Engineering Student | ME + Math @UC | ME Intern @ISRO | Ex-Intern @Guerbet & Tremco | TA - Chem Lab | Student Worker - BME
+    </p>
+  </header>
 
-		<section id="skills">
-			<h2>Skills</h2>
-			<ul>
-				<li>Python</li>
-				<li>MATLAB</li>
-				<li>LabVIEW</li>
-				<li>SolidWorks</li>
-				<li>Fusion 360</li>
-			</ul>
-		</section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Prince Prajapati</span></h1>
+      <p>Mechanical Engineering Student • Designer • Problem Solver</p>
+      <div class="hero-links">
+        <a href="assets/pdf/resume.pdf" class="btn" download>Download Resume</a>
+        <a href="https://www.linkedin.com/in/prince-prajapati-486727255/" class="btn-outline" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
-		<section id="resume">
-			<h2>Resume</h2>
-			<a href="pdf/resume.pdf" download>Download Resume</a>
-		</section>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a third-year Mechanical Engineering student at the University of Cincinnati with minors in Mathematics and Insurance and Risk Management. I love solving real-world challenges, especially in design, manufacturing, and automation.
+      I've interned in medical devices, construction materials, and drone tech. My projects include SolidWorks injector housings, detailed P&IDs for safety, and drone CAD designs. On campus, I also work as a TA, tutor, and student worker.
+    </p>
+  </section>
 
-		<section id="contact">
-			<h2>+1 (513) 430 6552</h2>
-			<p>Email: 004princep@gmail.com</p>
-			<p>LinkedIn: <a href="https://www.linkedin.com/in/prince-prajapati-486727255/" target="_blank">linkedin.com/in/prince-prajapati</a></p>
-			<p>GitHub: github.com/princeprajapati04</p>
-		</section>
-	</body>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Design of Injector Assembly</h3>
+        <p>Designed a medical injector housing using SolidWorks and GD&T. Optimized design for 3D printing and FEA validation.</p>
+        <p><strong>Tools:</strong> SolidWorks, ANSYS</p>
+      </div>
+      <div class="project-card">
+        <h3>Autonomous Drone Navigation</h3>
+        <p>Developed a simulation for drone obstacle avoidance and mapping using LIDAR and Python control scripts.</p>
+        <p><strong>Tools:</strong> Python, ROS</p>
+      </div>
+      <div class="project-card">
+        <h3>Heat Exchanger Performance Modeling</h3>
+        <p>Built MATLAB model to simulate heat exchanger efficiency under variable fluid conditions for process safety.</p>
+        <p><strong>Tools:</strong> MATLAB, Excel</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>MATLAB</li>
+      <li>LabVIEW</li>
+      <li>SolidWorks</li>
+      <li>Fusion 360</li>
+    </ul>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="assets/pdf/resume.pdf" download class="btn">Download Resume</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-phone"></i> +1 (513) 430 6552</p>
+    <p><i class="fas fa-envelope"></i> 004princep@gmail.com</p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/prince-prajapati-486727255/" target="_blank">LinkedIn</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/princeprajapati04" target="_blank">GitHub</a></p>
+  </section>
+
+</body>
 </html>
