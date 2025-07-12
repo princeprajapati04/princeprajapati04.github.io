@@ -25,10 +25,20 @@ function toggleDarkMode() {
   updateDarkModeIcon(isDark);
 }
 
+// 🌞 Update icon based on mode
 function updateDarkModeIcon(isDark) {
   const icon = document.getElementById('dark-mode-icon');
   if (!icon) return;
 
-  icon.classList.remove(isDark ? 'fa-moon' : 'fa-sun');
+  icon.classList.remove('fa-moon', 'fa-sun');
   icon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
 }
+
+// 🚀 Apply dark mode preference on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const prefersDark = localStorage.getItem('dark-mode') === 'true';
+  if (prefersDark) {
+    document.body.classList.add('dark-mode');
+  }
+  updateDarkModeIcon(prefersDark);
+});
