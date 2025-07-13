@@ -64,9 +64,11 @@
   background-color: #444;
 }
 @media (max-width: 768px) {
-  .nav-desktop {
-    display: none;
+  .navbar {
+    background-color: transparent;
+    box-shadow: none;
   }
+}
 
   .mobile-hamburger {
     display: flex;
