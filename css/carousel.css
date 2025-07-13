@@ -1,8 +1,9 @@
 .project-carousel {
   position: relative;
   overflow: hidden;
-  min-height: 220px;
+  min-height: 280px;
   text-align: center;
+  padding: 20px 0;
 }
 
 .project-slide {
@@ -11,10 +12,20 @@
 }
 
 .project-slide.active {
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
-/* Arrow container over the project */
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Arrows */
 .carousel-controls {
   position: absolute;
   top: 50%;
@@ -24,10 +35,9 @@
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
-  pointer-events: none; /* So buttons float over */
+  pointer-events: none;
 }
 
-/* Arrow buttons (circular, SVG inside) */
 .carousel-controls button {
   background: rgba(0, 0, 0, 0.6);
   border: none;
@@ -46,7 +56,6 @@
   background: rgba(0, 0, 0, 0.85);
 }
 
-/* SVG Arrow inside buttons */
 .carousel-controls svg {
   width: 20px;
   height: 20px;
