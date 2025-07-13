@@ -80,37 +80,38 @@
 .mobile-overlay {
   display: none;
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  background-color: rgba(0, 0, 0, 0.95);
+  top: 60px; /* Appears just below hamburger */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 300px;
+  background-color: rgba(51, 51, 51, 0.95);
+  border-radius: 12px;
+  padding: 20px;
   z-index: 1000;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  transition: 0.3s ease-in-out;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .mobile-overlay.active {
   display: flex;
 }
 
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
 .mobile-links a {
   color: white;
-  font-size: 2rem;
-  margin: 1rem 0;
+  font-size: 1.2rem;
   text-decoration: none;
   transition: color 0.3s;
 }
-
 .mobile-links a:hover {
   color: #00bfff;
-}
-
-.close-btn {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-  font-size: 2rem;
-  cursor: pointer;
-  color: white;
 }
