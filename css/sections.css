@@ -1,0 +1,100 @@
+/* ===== COMMON SECTION LAYOUT ===== */
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== PROJECTS ===== */
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+/* ===== SKILLS ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-grid li {
+  background: #e6f0fa;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ===== EXPERIENCE ===== */
+.experience-card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #0077cc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.experience-card h3 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+.company {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.date-location {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* ===== CONTACT ICONS ===== */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.contact-icons a {
+  color: #0077cc;
+  transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #005fa3;
+}
