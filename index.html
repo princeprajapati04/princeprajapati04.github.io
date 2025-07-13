@@ -154,29 +154,50 @@
 <section id="projects" data-aos="fade-up" data-aos-duration="1000">
   <h2>Projects</h2>
   <div class="project-carousel">
+    
+    <!-- Slide 1 -->
     <div class="project-slide active">
-      <h3>Design of Injector Assembly</h3>
-      <p>Created a 3D-printed housing for a medical injector using SolidWorks. Validated design with FEA.</p>
-      <p><strong>Tools:</strong> SolidWorks, ANSYS</p>
-    </div>
-    <div class="project-slide">
-      <h3>Autonomous Drone Navigation</h3>
-      <p>Simulated obstacle detection and route planning using LIDAR and ROS in Python.</p>
-      <p><strong>Tools:</strong> Python, ROS</p>
-    </div>
-    <div class="project-slide">
-      <h3>Heat Exchanger Modeling</h3>
-      <p>Built a dynamic MATLAB model to optimize heat exchange system performance under varying inputs.</p>
-      <p><strong>Tools:</strong> MATLAB, Excel</p>
+      <div class="project-card">
+        <h3>Design of Injector Assembly</h3>
+        <p>Created a 3D-printed housing for a medical injector using SolidWorks. Validated design with FEA.</p>
+        <p><strong>Tools:</strong> SolidWorks, ANSYS</p>
+      </div>
     </div>
 
-    <!-- ⬅️➡️ Controls -->
+    <!-- Slide 2 -->
+    <div class="project-slide">
+      <div class="project-card">
+        <h3>Autonomous Drone Navigation</h3>
+        <p>Simulated obstacle detection and route planning using LIDAR and ROS in Python.</p>
+        <p><strong>Tools:</strong> Python, ROS</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="project-slide">
+      <div class="project-card">
+        <h3>Heat Exchanger Modeling</h3>
+        <p>Built a dynamic MATLAB model to optimize heat exchange system performance under varying inputs.</p>
+        <p><strong>Tools:</strong> MATLAB, Excel</p>
+      </div>
+    </div>
+
+    <!-- ⬅️➡️ SVG Controls -->
     <div class="carousel-controls">
-      <button id="prev-project">&#8592;</button>
-      <button id="next-project">&#8594;</button>
+      <button id="prev-project" aria-label="Previous Project">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <polyline points="15 18 9 12 15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button id="next-project" aria-label="Next Project">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <polyline points="9 18 15 12 9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
   </div>
 </section>
+
   
 <!-- 🛠️ Skills -->
   <section id="skills" data-aos="fade-up" data-aos-duration="1000">
