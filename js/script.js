@@ -10,9 +10,9 @@ window.addEventListener('load', () => {
   }
 });
 
-// ✅ Main logic (DOMContentLoaded)
+// ✅ All DOM logic
 document.addEventListener('DOMContentLoaded', () => {
-  // 🌙 Set dark mode toggle
+  // 🌙 Dark Mode Icon Toggle
   const icon = document.getElementById('dark-mode-icon');
   if (icon) {
     icon.addEventListener('click', toggleDarkMode);
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 📶 Scroll progress bar
+  // 📶 Scroll Progress Bar
   const progressBar = document.getElementById('progress-bar');
   window.addEventListener('scroll', () => {
     if (!progressBar) return;
@@ -67,24 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrolled = (scrollTop / docHeight) * 100;
     progressBar.style.width = scrolled + '%';
   });
-});
 
-// 🌙 Toggle dark mode
-function toggleDarkMode() {
-  const isDark = document.body.classList.toggle('dark-mode');
-  localStorage.setItem('dark-mode', isDark);
-  updateDarkModeIcon(isDark);
-}
-
-// 🌞 Update dark mode icon
-function updateDarkModeIcon(isDark) {
-  const icon = document.getElementById('dark-mode-icon');
-  if (!icon) return;
-  icon.classList.remove('fa-moon', 'fa-sun');
-  icon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
-}
-// 📂 Project carousel
-document.addEventListener('DOMContentLoaded', () => {
+  // 📂 Project Carousel
   const slides = document.querySelectorAll('.project-slide');
   const nextBtn = document.getElementById('next-project');
   const prevBtn = document.getElementById('prev-project');
@@ -96,15 +80,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  nextBtn.addEventListener('click', () => {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  });
+  if (nextBtn && prevBtn && slides.length) {
+    nextBtn.addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    });
 
-  prevBtn.addEventListener('click', () => {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
-  });
+    prevBtn.addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    });
 
-  showSlide(current);
+    showSlide(current);
+  }
 });
+
+// 🌙 Toggle dark mode
+function toggleDarkMode() {
+  const isDark = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('dark-mode', isDark);
+  updateDarkModeIcon(isDark);
+}
+
+// 🌞 Update icon for dark mode
+function updateDarkModeIcon(isDark) {
+  const icon = document.getElementById('dark-mode-icon');
+  if (!icon) return;
+  icon.classList.remove('fa-moon', 'fa-sun');
+  icon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
+}
