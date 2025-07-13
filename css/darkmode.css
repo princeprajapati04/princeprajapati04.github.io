@@ -30,6 +30,10 @@ body.dark-mode li {
   color: #f4f4f4;
 }
 
+body.dark-mode .hero-content p {
+  color: #cccccc; /* Improve subtitle readability */
+}
+
 body.dark-mode .logo,
 body.dark-mode .nav-links li a {
   color: #f4f4f4;
@@ -44,15 +48,18 @@ body.dark-mode .experience-card h3 {
 }
 
 /* Buttons */
-body.dark-mode .btn {
+body.dark-mode .btn,
+body.dark-mode a.btn {
   background-color: #00bfff;
-  color: #fff;
+  color: white;
 }
 
-body.dark-mode .btn:hover {
+body.dark-mode .btn:hover,
+body.dark-mode a.btn:hover {
   background-color: #0099e6;
 }
 
+/* Outline buttons (if any) */
 body.dark-mode .btn-outline {
   border-color: #00bfff;
   color: #00bfff;
@@ -61,6 +68,11 @@ body.dark-mode .btn-outline {
 body.dark-mode .btn-outline:hover {
   background-color: #00bfff;
   color: white;
+}
+
+/* General link hover (fallback for text links) */
+body.dark-mode a:hover {
+  color: #00bfff;
 }
 
 /* Contact Icons */
