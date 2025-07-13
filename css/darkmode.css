@@ -8,7 +8,9 @@
   font-size: 24px;
   border: none;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 9999; /* Make sure it's on top of everything */
+  padding: 10px;
+  mix-blend-mode: difference; /* Optional: helps it stay visible on all backgrounds */
 }
 
 /* ===== DARK MODE GENERAL ===== */
