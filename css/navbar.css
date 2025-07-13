@@ -42,22 +42,39 @@
   color: #00bfff;
 }
 
-.hamburger {
+/* ===== FLOATING HAMBURGER BUTTON ===== */
+.mobile-hamburger {
   display: none;
-  font-size: 2rem;
-  cursor: pointer;
+  position: fixed;
+  bottom: 20px; /* use top: 20px; for top-center */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
   color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
   z-index: 1001;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
+.mobile-hamburger:hover {
+  background-color: #444;
+}
 @media (max-width: 768px) {
   .nav-desktop {
     display: none;
   }
-  .hamburger {
-    display: block;
+
+  .mobile-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
+
 
 /* ===== MOBILE MENU OVERLAY ===== */
 .mobile-overlay {
