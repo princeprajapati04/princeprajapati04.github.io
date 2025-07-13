@@ -1,40 +1,33 @@
 .project-carousel {
   position: relative;
   overflow: hidden;
-  min-height: 320px;
+  min-height: 280px;
   text-align: center;
   padding: 20px 0;
 }
 
+/* Each slide = one project */
 .project-slide {
   display: none;
   animation: fadeIn 0.5s ease-in-out;
-  position: relative;
-  justify-content: center;
 }
 
 .project-slide.active {
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 
+/* Card inside the slide */
 .project-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   max-width: 600px;
-  width: 90%;
+  margin: 0 auto;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-}
-
-/* Arrows (SVG inside buttons) */
+/* Arrows */
 .carousel-controls {
   position: absolute;
   top: 50%;
@@ -43,8 +36,8 @@
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
-  padding: 0 16px;
-  pointer-events: none; /* Allows the controls to overlay card */
+  padding: 0 10px;
+  pointer-events: none;
 }
 
 .carousel-controls button {
@@ -58,7 +51,7 @@
   pointer-events: all;
   cursor: pointer;
   transition: background 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-controls button:hover {
@@ -73,12 +66,6 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
