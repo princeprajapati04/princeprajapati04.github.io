@@ -72,9 +72,12 @@
     background-color: transparent;
     box-shadow: none;
   }
+    .logo {
+    display: none;
+  }
 
   .mobile-hamburger {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
   }
