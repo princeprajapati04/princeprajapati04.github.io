@@ -14,6 +14,7 @@
   display: block;
 }
 
+/* Arrow container over the project */
 .carousel-controls {
   position: absolute;
   top: 50%;
@@ -22,25 +23,35 @@
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
-  pointer-events: none; /* allow buttons to float over content */
+  padding: 0 10px;
+  pointer-events: none; /* So buttons float over */
 }
 
+/* Arrow buttons (circular, SVG inside) */
 .carousel-controls button {
-  background: #0077cc;
-  color: white;
+  background: rgba(0, 0, 0, 0.6);
   border: none;
-  font-size: 22px;
-  padding: 12px 18px;
   border-radius: 50%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
   cursor: pointer;
-  pointer-events: all; /* restore click functionality */
   transition: background 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-controls button:hover {
-  background: #005fa3;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* SVG Arrow inside buttons */
+.carousel-controls svg {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+  stroke-width: 2;
 }
 
 @keyframes fadeIn {
