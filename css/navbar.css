@@ -64,11 +64,14 @@
   background-color: #444;
 }
 @media (max-width: 768px) {
+  .nav-desktop {
+    display: none !important;
+  }
+
   .navbar {
     background-color: transparent;
     box-shadow: none;
   }
-}
 
   .mobile-hamburger {
     display: flex;
@@ -76,7 +79,6 @@
     align-items: center;
   }
 }
-
 
 /* ===== MOBILE MENU OVERLAY ===== */
 .mobile-overlay {
