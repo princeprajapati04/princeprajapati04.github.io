@@ -1,0 +1,111 @@
+/* ===== HERO SECTION + ROCKET ===== */
+.hero {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  max-width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.hero-content.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.hero-content .btn {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.2rem;
+  background: #00bfff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background: #0095cc;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-content .btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* ===== ROCKET ANIMATION ===== */
+.rocket-launch {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.rocket {
+  width: 300px;
+  max-width: 80vw;
+  height: auto;
+  transition: transform 2s ease-in;
+  cursor: pointer;
+  z-index: 1000;
+  position: relative;
+  pointer-events: auto;
+}
+
+.smoke {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: radial-gradient(circle, rgba(200,200,200,0.4) 10%, transparent 70%);
+  opacity: 0;
+  animation: none;
+  z-index: 1;
+}
+
+.launching {
+  transform: translateY(-600px);
+}
+
+.smoke-active {
+  animation: smokeRise 2s ease-out forwards;
+}
