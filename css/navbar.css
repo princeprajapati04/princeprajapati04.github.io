@@ -46,7 +46,7 @@
 .mobile-hamburger {
   display: none;
   position: fixed;
-  bottom: 20px; /* use top: 20px; for top-center */
+  bottom: 50px; /* use top: 20px; for top-center */
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;
