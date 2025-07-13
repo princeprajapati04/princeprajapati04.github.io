@@ -56,13 +56,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const mobileOverlay = document.getElementById('mobileOverlay');
   const closeBtn = document.getElementById('closeBtn');
 
-  if (hamburger && mobileOverlay && closeBtn) {
+  if (hamburger && mobileOverlay) {
     hamburger.addEventListener('click', () => {
       mobileOverlay.classList.add('active');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      mobileOverlay.classList.remove('active');
     });
 
     // ✅ Close menu when any link is clicked
