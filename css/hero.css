@@ -96,6 +96,8 @@ body.dark-mode .rocket-launch {
   pointer-events: auto;
   display: block;
   margin: 0 auto;
+    /* 👇 Pull it slightly to the right */
+  transform: translateX(20px);
 }
 
 .smoke {
