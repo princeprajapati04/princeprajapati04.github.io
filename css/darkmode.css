@@ -4,97 +4,84 @@
   top: 20px;
   right: 20px;
   background: none;
-  color: #0077cc;
+  color: #00bfff;
   font-size: 24px;
   border: none;
   cursor: pointer;
-  z-index: 9999; /* Make sure it's on top of everything */
+  z-index: 9999;
   padding: 10px;
-  mix-blend-mode: difference; /* Optional: helps it stay visible on all backgrounds */
 }
 
 /* ===== DARK MODE GENERAL ===== */
 body.dark-mode {
-  background: #121212;
+  background-color: #121212;
   color: #f4f4f4;
 }
 
+/* Apply dark background to ALL sections */
 body.dark-mode section,
 body.dark-mode .hero {
-  background-color: #1a1a1a;
+  background-color: #1a1a1a !important;
 }
 
+/* Text and headers */
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
 body.dark-mode p,
-body.dark-mode li {
-  color: #f4f4f4;
+body.dark-mode li,
+body.dark-mode span {
+  color: #f4f4f4 !important;
 }
 
-body.dark-mode .hero-content p {
-  color: #cccccc; /* Improve subtitle readability */
-}
-
+/* Logo and nav */
 body.dark-mode .logo,
 body.dark-mode .nav-links li a {
   color: #f4f4f4;
 }
-
 body.dark-mode .nav-links li a:hover,
 body.dark-mode .highlight,
-body.dark-mode .btn,
 body.dark-mode .project-card h3,
 body.dark-mode .experience-card h3 {
   color: #00bfff !important;
 }
 
-/* Buttons */
-body.dark-mode .btn,
-body.dark-mode a.btn {
-  background-color: #00bfff;
-  color: white;
+/* Button styles */
+body.dark-mode .btn {
+  background-color: #00bfff !important;
+  color: white !important;
 }
-
-body.dark-mode .btn:hover,
-body.dark-mode a.btn:hover {
-  background-color: #0099e6;
+body.dark-mode .btn:hover {
+  background-color: #0099e6 !important;
 }
-
-/* Outline buttons (if any) */
 body.dark-mode .btn-outline {
   border-color: #00bfff;
   color: #00bfff;
 }
-
 body.dark-mode .btn-outline:hover {
   background-color: #00bfff;
   color: white;
 }
 
-/* General link hover (fallback for text links) */
-body.dark-mode a:hover {
-  color: #00bfff;
+/* Skills */
+body.dark-mode .skills-grid li {
+  background-color: #2a2a2a;
+  color: #f4f4f4;
+}
+
+/* Cards */
+body.dark-mode .project-card,
+body.dark-mode .experience-card {
+  background-color: #2a2a2a !important;
+  border-color: #444;
+}
+body.dark-mode .experience-card {
+  border-left: 5px solid #00bfff;
 }
 
 /* Contact Icons */
 body.dark-mode #contact i {
   color: #00bfff;
-}
-
-/* Skills & Cards */
-body.dark-mode .skills-grid li {
-  background-color: #2a2a2a;
-}
-
-body.dark-mode .project-card {
-  background-color: #2a2a2a;
-  border-color: #444;
-}
-
-body.dark-mode .experience-card {
-  background-color: #2a2a2a;
-  border-color: #00bfff;
 }
 
 /* Form */
@@ -104,17 +91,14 @@ body.dark-mode .contact-form textarea {
   border: 1px solid #444;
   color: #f4f4f4;
 }
-
 body.dark-mode .contact-form input::placeholder,
 body.dark-mode .contact-form textarea::placeholder {
-  color: #ccc;
+  color: #aaa;
 }
-
 body.dark-mode .contact-form button {
   background-color: #00bfff;
   color: white;
 }
-
 body.dark-mode .contact-form button:hover {
   background-color: #0099e6;
 }
