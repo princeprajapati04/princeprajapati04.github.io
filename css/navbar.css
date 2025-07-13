@@ -46,9 +46,9 @@
 .mobile-hamburger {
   display: none;
   position: fixed;
-  bottom: 50px; /* use top: 20px; for top-center */
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%); /* center both X and Y */
   background-color: #333;
   color: white;
   border-radius: 50%;
@@ -58,7 +58,9 @@
   z-index: 1001;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
+  touch-action: manipulation;
 }
+
 
 .mobile-hamburger:hover {
   background-color: #444;
