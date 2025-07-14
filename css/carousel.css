@@ -1,71 +1,22 @@
-.project-carousel {
-  position: relative;
-  overflow: hidden;
-  min-height: 280px;
-  text-align: center;
-  padding: 20px 0;
+.project-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px 20px;
 }
 
-/* Each slide = one project */
-.project-slide {
-  display: none;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.project-slide.active {
-  display: block;
-}
-
-/* Card inside the slide */
 .project-card {
   background: #fff;
+  color: #333;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 800px;
   margin: 0 auto;
-  text-align: left;
 }
 
-/* Arrows */
-.carousel-controls {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-  pointer-events: none;
-}
-
-.carousel-controls button {
-  background: rgba(0, 0, 0, 0.6);
-  border: none;
-  border-radius: 50%;
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: all;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.carousel-controls button:hover {
-  background: rgba(0, 0, 0, 0.85);
-}
-
-.carousel-controls svg {
-  width: 20px;
-  height: 20px;
-  stroke: white;
-  stroke-width: 2;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
