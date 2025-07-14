@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrolled = (scrollTop / docHeight) * 100;
     progressBar.style.width = scrolled + '%';
   });
+});
 
-  
-// 🌙 Toggle dark mode
+// 🌙 Toggle dark mode (make sure this is globally accessible)
 function toggleDarkMode() {
   const isDark = document.body.classList.toggle('dark-mode');
   localStorage.setItem('dark-mode', isDark);
