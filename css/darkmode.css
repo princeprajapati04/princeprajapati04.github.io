@@ -102,3 +102,7 @@ body.dark-mode .contact-form button {
 body.dark-mode .contact-form button:hover {
   background-color: #0099e6;
 }
+.dark-mode-toggle i {
+  pointer-events: none;
+}
+
