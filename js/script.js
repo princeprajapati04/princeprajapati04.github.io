@@ -7,6 +7,8 @@ window.addEventListener('load', () => {
   if (isDark) {
     document.body.classList.add('dark-mode');
     updateDarkModeIcon(isDark);
+  } else {
+    updateDarkModeIcon(false);
   }
 });
 
@@ -16,22 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const icon = document.getElementById('dark-mode-icon');
   if (icon) {
     icon.addEventListener('click', toggleDarkMode);
-  }
-
-  // 🚀 Rocket Animation
-  const rocket = document.getElementById('rocket');
-  const smoke = document.getElementById('smoke');
-  const heroContent = document.getElementById('hero-content');
-
-  if (rocket && smoke && heroContent) {
-    rocket.addEventListener('click', () => {
-      rocket.classList.add('launching');
-      smoke.classList.add('smoke-active');
-      setTimeout(() => {
-        heroContent.style.opacity = 1;
-        heroContent.style.transition = 'opacity 1s ease-in';
-      }, 2000);
-    });
   }
 
   // 🍔 Mobile Menu Toggle
