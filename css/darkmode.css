@@ -107,8 +107,6 @@ body.dark-mode .contact-form button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.dark-mode-toggle i {
-  pointer-events: none;
+   pointer-events: auto;
 }
 
