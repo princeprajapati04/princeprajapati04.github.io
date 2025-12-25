@@ -102,6 +102,12 @@ body.dark-mode .contact-form button {
 body.dark-mode .contact-form button:hover {
   background-color: #0099e6;
 }
+/* ===== FIX DARK MODE ICON CLICK AREA ===== */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .dark-mode-toggle i {
   pointer-events: none;
 }
