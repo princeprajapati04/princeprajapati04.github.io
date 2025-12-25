@@ -124,3 +124,12 @@
 .mobile-links a:hover {
   color: #00bfff;
 }
+/* ===== SAFETY: prevent mobile overlay from blocking clicks when hidden ===== */
+.mobile-overlay {
+  pointer-events: none;
+}
+
+.mobile-overlay.active {
+  pointer-events: auto;
+}
+
