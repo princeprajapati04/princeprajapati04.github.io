@@ -1,11 +1,20 @@
-/* ===== HERO SECTION + ROCKET ===== */
+/* ===== HERO SECTION ===== */
 .hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
   padding: 0;
   margin: 0;
   text-align: center;
   background-color: #ffffff;
+  overflow: hidden;
 }
 
+body.dark-mode .hero {
+  background-color: #1a1a1a;
+}
+
+/* ===== HERO CONTENT ===== */
 .hero-content {
   position: absolute;
   top: 50%;
@@ -26,110 +35,4 @@
   pointer-events: auto;
 }
 
-.hero-content h1 {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-content p {
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-  color: var(--text-color);
-}
-
-.hero-content .btn {
-  padding: 1.25rem 2.5rem;
-  font-size: 1.2rem;
-  background: #00bfff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.hero-content .btn:hover {
-  background: #0095cc;
-}
-
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-
-  .hero-content .btn {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-  }
-}
-
-/* ===== ROCKET ANIMATION ===== */
-/* ===== ROCKET ANIMATION ===== */
-.rocket-launch {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f4f4f4;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-body.dark-mode .rocket-launch {
-  background-color: #1a1a1a !important;
-}
-
-.rocket {
-  width: 300px;
-  max-width: 80vw;
-  height: auto;
-  transition: transform 2s ease-in;
-  cursor: pointer;
-  z-index: 1000;
-  position: relative;
-  pointer-events: auto;
-  display: block;
-  margin: 0 auto;
-    /* 👇 Pull it slightly to the right */
-  transform: translateX(20px);
-}
-
-.smoke {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 120px;
-  background: radial-gradient(circle, rgba(200,200,200,0.4) 10%, transparent 70%);
-  opacity: 0;
-  animation: none;
-  z-index: 1;
-}
-
-body.dark-mode .smoke {
-  background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 70%);
-}
-
-.launching {
-  transform: translateY(-600px);
-}
-
-.smoke-active {
-  animation: smokeRise 2s ease-out forwards;
-}
-
-@keyframes smokeRise {
-  0% {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(-40px);
-  }
-}
+.her
