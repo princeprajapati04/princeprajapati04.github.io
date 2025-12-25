@@ -17,23 +17,26 @@ body.dark-mode .hero {
 /* ===== HERO CONTENT ===== */
 .hero-content {
   width: 100%;
-  max-width: 1000px;     /* keeps layout clean */
+  max-width: 1000px;  /* a bit wider so title fits one line */
   padding: 0 20px;
   text-align: center;
   opacity: 1;
   pointer-events: auto;
 }
 
+/* keep class for compatibility */
+.hero-content.show {
+  opacity: 1;
+}
+
 /* ===== HERO TITLE ===== */
 .hero-content h1 {
-  font-size: 3rem;
-  line-height: 1.1;
+  font-size: 3.2rem;
+  line-height: 1.05;
   margin-bottom: 18px;
   font-weight: 800;
+  letter-spacing: -0.02em;
   color: var(--heading-color, #111);
-
-  /* ✅ FORCE ONE LINE ON DESKTOP */
-  white-space: nowrap;
 }
 
 /* ===== HERO SUBTEXT ===== */
@@ -56,23 +59,19 @@ body.dark-mode .hero {
   opacity: 0.85;
 }
 
-/* ===== HERO BUTTONS ===== */
-.hero-links {
-  margin-top: 26px;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
 /* ===== DESKTOP SCALE ===== */
 @media (min-width: 1024px) {
   .hero {
-    padding-top: 100px;
+    padding: 100px 20px 60px;
+  }
+
+  .hero-content {
+    max-width: 1200px; /* ✅ more room so h1 stays one line */
   }
 
   .hero-content h1 {
-    font-size: 4.8rem;     /* BIG, but elegant */
+    font-size: 4.8rem;     /* big but cleaner than 6rem */
+    white-space: nowrap;   /* ✅ forces ONE LINE on desktop */
   }
 
   .hero-content p:nth-of-type(1) {
@@ -98,7 +97,17 @@ body.dark-mode .hero {
 /* ===== MOBILE FIX ===== */
 @media (max-width: 768px) {
   .hero-content h1 {
-    white-space: normal;   /* allow wrapping on mobile */
+    white-space: normal; /* allow wrapping on small screens */
     font-size: 2.4rem;
   }
+}
+
+/* FORCE OVERRIDE (in case other CSS is overriding hero) */
+.hero-content {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
