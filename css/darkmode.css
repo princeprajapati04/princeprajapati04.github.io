@@ -88,15 +88,20 @@ body.dark-mode .skills-grid li {
   color: #f4f4f4;
 }
 
-/* Cards */
+/* Cards (FIXED) */
 body.dark-mode .project-card,
 body.dark-mode .experience-card {
   background-color: #2a2a2a !important;
-  border-color: #444;
+  /* ❌ removed: border-color: #444; (this was turning project border gray) */
 }
 
+/* ✅ Keep blue accent border on BOTH */
 body.dark-mode .experience-card {
-  border-left: 5px solid #00bfff;
+  border-left: 5px solid #00bfff !important;
+}
+
+body.dark-mode .project-card {
+  border-left: 5px solid #00bfff !important;
 }
 
 /* Contact Icons */
