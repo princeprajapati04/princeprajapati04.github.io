@@ -14,10 +14,11 @@ window.addEventListener('load', () => {
 
 // ✅ All DOM logic
 document.addEventListener('DOMContentLoaded', () => {
-  // 🌙 Dark Mode Icon Toggle
-  const icon = document.getElementById('dark-mode-icon');
-  if (icon) {
-    icon.addEventListener('click', toggleDarkMode);
+
+  // 🌙 Dark Mode Toggle — FIXED
+  const darkModeBtn = document.querySelector('.dark-mode-toggle');
+  if (darkModeBtn) {
+    darkModeBtn.addEventListener('click', toggleDarkMode);
   }
 
   // 🍔 Mobile Menu Toggle
@@ -37,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('click', (e) => {
-      const isClickInside = mobileOverlay.contains(e.target) || hamburger.contains(e.target);
+      const isClickInside =
+        mobileOverlay.contains(e.target) || hamburger.contains(e.target);
       if (!isClickInside) {
         mobileOverlay.classList.remove('active');
       }
@@ -55,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// 🌙 Toggle dark mode (make sure this is globally accessible)
+// 🌙 Toggle dark mode
 function toggleDarkMode() {
   const isDark = document.body.classList.toggle('dark-mode');
   localStorage.setItem('dark-mode', isDark);
