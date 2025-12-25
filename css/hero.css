@@ -7,7 +7,7 @@
   justify-content: center;
   text-align: center;
   background-color: #ffffff;
-  padding: 80px 20px 40px;
+  padding: 90px 20px 50px;
 }
 
 body.dark-mode .hero {
@@ -17,25 +17,23 @@ body.dark-mode .hero {
 /* ===== HERO CONTENT ===== */
 .hero-content {
   width: 100%;
-  max-width: 900px;     /* keeps content organized */
+  max-width: 1000px;     /* keeps layout clean */
   padding: 0 20px;
   text-align: center;
-  opacity: 1;           /* always visible */
-  pointer-events: auto;
-}
-
-/* keep class for compatibility */
-.hero-content.show {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* ===== HERO TITLE ===== */
 .hero-content h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   line-height: 1.1;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   font-weight: 800;
   color: var(--heading-color, #111);
+
+  /* ✅ FORCE ONE LINE ON DESKTOP */
+  white-space: nowrap;
 }
 
 /* ===== HERO SUBTEXT ===== */
@@ -43,7 +41,7 @@ body.dark-mode .hero {
   margin: 0 auto 14px;
   color: var(--text-color, #444);
   line-height: 1.5;
-  max-width: 720px;
+  max-width: 760px;
 }
 
 /* Main subtitle */
@@ -55,17 +53,26 @@ body.dark-mode .hero {
 /* Tagline */
 .hero-content p:nth-of-type(2) {
   font-size: 1.05rem;
-  opacity: 0.9;
+  opacity: 0.85;
+}
+
+/* ===== HERO BUTTONS ===== */
+.hero-links {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 /* ===== DESKTOP SCALE ===== */
 @media (min-width: 1024px) {
   .hero {
-    padding: 100px 20px 60px;
+    padding-top: 100px;
   }
 
   .hero-content h1 {
-    font-size: 5rem;   /* BIG name on desktop */
+    font-size: 4.8rem;     /* BIG, but elegant */
   }
 
   .hero-content p:nth-of-type(1) {
@@ -80,19 +87,18 @@ body.dark-mode .hero {
 /* ===== LARGE SCREENS ===== */
 @media (min-width: 1440px) {
   .hero-content h1 {
-    font-size: 6rem;
+    font-size: 5.4rem;
   }
 
   .hero-content p:nth-of-type(1) {
     font-size: 1.8rem;
   }
 }
-/* FORCE OVERRIDE (in case other CSS is overriding hero) */
-.hero-content {
-  position: static !important;
-  top: auto !important;
-  left: auto !important;
-  transform: none !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    white-space: normal;   /* allow wrapping on mobile */
+    font-size: 2.4rem;
+  }
 }
