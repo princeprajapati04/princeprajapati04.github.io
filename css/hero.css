@@ -87,3 +87,12 @@ body.dark-mode .hero {
     font-size: 1.8rem;
   }
 }
+/* FORCE OVERRIDE (in case other CSS is overriding hero) */
+.hero-content {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
