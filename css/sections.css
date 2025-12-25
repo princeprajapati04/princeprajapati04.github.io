@@ -4,7 +4,7 @@ section {
   margin: 20px auto;
   max-width: 900px;
   background: #fff;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
@@ -35,19 +35,20 @@ section {
   gap: 24px;
 }
 
+/* ===== PROJECT CARD ===== */
 .project-card {
   background: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
 }
 
 .project-card img {
@@ -102,7 +103,7 @@ section {
 .skills-grid li {
   background: #e6f0fa;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 6px;
   text-align: center;
   font-weight: bold;
 }
@@ -110,11 +111,20 @@ section {
 /* ===== EXPERIENCE ===== */
 .experience-card {
   background: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 22px;
+  margin-bottom: 24px;
   border-left: 5px solid #0077cc;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  /* SAME hover feel as projects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+  border-left-color: #00bfff;
 }
 
 .experience-card h3 {
@@ -130,6 +140,7 @@ section {
 .date-location {
   font-style: italic;
   margin-bottom: 10px;
+  color: #666;
 }
 
 /* ===== CONTACT ICONS ===== */
@@ -143,7 +154,7 @@ section {
 
 .contact-icons a {
   color: #0077cc;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .contact-icons a:hover {
