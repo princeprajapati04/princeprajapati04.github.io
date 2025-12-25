@@ -1,4 +1,4 @@
-/* ===== DARK MODE TOGGLE ===== */
+/* ===== DARK MODE TOGGLE (FIXED) ===== */
 .dark-mode-toggle {
   position: fixed;
   top: 20px;
@@ -8,8 +8,23 @@
   font-size: 24px;
   border: none;
   cursor: pointer;
-  z-index: 9999;
-  padding: 10px;
+
+  /* ✅ Always above everything */
+  z-index: 100000;
+
+  /* ✅ Bigger and centered click area */
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* ✅ Ensure it receives clicks */
+  pointer-events: auto;
+}
+
+/* ✅ Prevent icon from “stealing” clicks */
+.dark-mode-toggle i {
+  pointer-events: none;
 }
 
 /* ===== DARK MODE GENERAL ===== */
@@ -39,6 +54,7 @@ body.dark-mode .logo,
 body.dark-mode .nav-links li a {
   color: #f4f4f4;
 }
+
 body.dark-mode .nav-links li a:hover,
 body.dark-mode .highlight,
 body.dark-mode .project-card h3,
@@ -51,13 +67,16 @@ body.dark-mode .btn {
   background-color: #00bfff !important;
   color: white !important;
 }
+
 body.dark-mode .btn:hover {
   background-color: #0099e6 !important;
 }
+
 body.dark-mode .btn-outline {
   border-color: #00bfff;
   color: #00bfff;
 }
+
 body.dark-mode .btn-outline:hover {
   background-color: #00bfff;
   color: white;
@@ -75,6 +94,7 @@ body.dark-mode .experience-card {
   background-color: #2a2a2a !important;
   border-color: #444;
 }
+
 body.dark-mode .experience-card {
   border-left: 5px solid #00bfff;
 }
@@ -91,22 +111,17 @@ body.dark-mode .contact-form textarea {
   border: 1px solid #444;
   color: #f4f4f4;
 }
+
 body.dark-mode .contact-form input::placeholder,
 body.dark-mode .contact-form textarea::placeholder {
   color: #aaa;
 }
+
 body.dark-mode .contact-form button {
   background-color: #00bfff;
   color: white;
 }
+
 body.dark-mode .contact-form button:hover {
   background-color: #0099e6;
 }
-/* ===== FIX DARK MODE ICON CLICK AREA ===== */
-.dark-mode-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-   pointer-events: auto;
-}
-
