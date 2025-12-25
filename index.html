@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/preloader.css">
   <link rel="stylesheet" href="css/scrollbar.css">
   <link rel="stylesheet" href="css/animations.css">
+
   <!-- external libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -26,69 +27,68 @@
 <body>
   <div id="preloader"><div class="loader"></div></div>
   <div id="progress-bar"></div>
+
   <button class="dark-mode-toggle" onclick="toggleDarkMode()">
     <i id="dark-mode-icon" class="fas fa-moon"></i>
   </button>
 
   <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
     <div class="nav-container">
-      
-   <div class="nav-desktop">
-     <div class="logo">Prince Prajapati</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#resume">Resume</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</div>
 
-<!-- Floating hamburger button -->
-<div class="mobile-hamburger" id="hamburger">
-  <i class="fas fa-bars"></i>
-</div>
+      <div class="nav-desktop">
+        <div class="logo">Prince Prajapati</div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
 
+      <!-- Floating hamburger button -->
+      <div class="mobile-hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
 
-<div class="mobile-overlay" id="mobileOverlay">
-  <nav class="mobile-links">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</div>
+      <div class="mobile-overlay" id="mobileOverlay">
+        <nav class="mobile-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
   </nav>
+
+  <!-- ✅ HERO (rocket removed) -->
   <header class="hero" data-aos="zoom-in-up" data-aos-duration="1000">
-  <!-- 🚀 Rocket Launch Animation Container -->
-  <div class="rocket-launch">
-    <img src="assets/images/rocket5.png" alt="Rocket" class="rocket" id="rocket">
-    <div class="smoke" id="smoke"></div>
-  </div>
-
-  <!-- 🧑‍🚀 Hero Content Revealed After Launch -->
-  <div class="hero-content" id="hero-content" style="opacity: 0;">
-    <h1>Hi, I'm <span class="highlight">Prince Prajapati</span></h1>
-    <p>Mechanical Engineering Student • Designer • Problem Solver</p>
-     <p>Designing solutions,Engineering impact.</p>
-    <div class="hero-links">
+    <!-- ✅ Hero Content (now visible immediately) -->
+    <div class="hero-content show" id="hero-content">
+      <h1>Hi, I'm <span class="highlight">Prince Prajapati</span></h1>
+      <p>Mechanical Engineering Student • Designer • Problem Solver</p>
+      <p>Designing solutions, Engineering impact.</p>
+      <div class="hero-links">
+      </div>
     </div>
-  </div>
-</header>
-<!-- 🧑‍💼 About Me -->
+  </header>
+
+  <!-- 🧑‍💼 About Me -->
   <section id="about" data-aos="fade-up" data-aos-duration="1000">
     <h2>About Me</h2>
     <p>
       I am a third-year Mechanical Engineering student at the University of Cincinnati with minors in Mathematics and Insurance and Risk Management. Passionate about design, automation, and real-world engineering challenges. I've completed internships in medical device, construction, and aerospace sectors, and contributed to drone and injector system designs. I also work as a Chemistry TA and a student worker in the BME department.
     </p>
   </section>
+
   <!-- 💼 Experience -->
   <section id="experience" data-aos="fade-up" data-aos-duration="1000">
     <h2>Experience</h2>
+
     <div class="experience-card" data-aos-delay="100">
       <h3>Mechanical Engineering Intern</h3>
       <div class="company">ISRO</div>
@@ -98,6 +98,7 @@
         <li>CAD modeling and testing setup for aerospace components.</li>
       </ul>
     </div>
+
     <div class="experience-card" data-aos-delay="200">
       <h3>BME Student Worker</h3>
       <div class="company">University of Cincinnati</div>
@@ -107,6 +108,7 @@
         <li>Oversaw inventory and helped in setup for research labs.</li>
       </ul>
     </div>
+
     <div class="experience-card" data-aos-delay="300">
       <h3>Chemistry Lab Teaching Assistant</h3>
       <div class="company">University of Cincinnati</div>
@@ -116,6 +118,7 @@
         <li>Ensured safety and compliance in all sessions.</li>
       </ul>
     </div>
+
     <div class="experience-card" data-aos-delay="400">
       <h3>Mechanical Engineering Intern</h3>
       <div class="company">Guerbet</div>
@@ -125,6 +128,7 @@
         <li>Cross-functional collaboration across teams.</li>
       </ul>
     </div>
+
     <div class="experience-card" data-aos-delay="500">
       <h3>Process Engineering Intern</h3>
       <div class="company">Tremco</div>
@@ -134,6 +138,7 @@
         <li>Optimized production processes by 10% efficiency.</li>
       </ul>
     </div>
+
     <div class="experience-card" data-aos-delay="600">
       <h3>Engineer Intern</h3>
       <div class="company">Prime UAV</div>
@@ -142,6 +147,7 @@
         <li>CAD modeling for UAV components and prototype testing.</li>
       </ul>
     </div>
+
     <div class="experience-card" data-aos-delay="700">
       <h3>Desk Assistant</h3>
       <div class="company">University of Cincinnati</div>
@@ -151,30 +157,29 @@
       </ul>
     </div>
   </section>
-<section id="projects" data-aos="fade-up" data-aos-duration="1000">
-  <h2>Projects</h2>
-  <div class="project-vertical">
-    <div class="project-card">
-      <h3>Design of Injector Assembly</h3>
-      <p>Created a 3D-printed housing for a medical injector using SolidWorks. Validated design with FEA.</p>
-      <p><strong>Tools:</strong> SolidWorks, ANSYS</p>
-    </div>
-    <div class="project-card">
-      <h3>Autonomous Drone Navigation</h3>
-      <p>Simulated obstacle detection and route planning using LIDAR and ROS in Python.</p>
-      <p><strong>Tools:</strong> Python, ROS</p>
-    </div>
-    <div class="project-card">
-      <h3>Heat Exchanger Modeling</h3>
-      <p>Built a dynamic MATLAB model to optimize heat exchange system performance under varying inputs.</p>
-      <p><strong>Tools:</strong> MATLAB, Excel</p>
-    </div>
-  </div>
-</section>
 
+  <section id="projects" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Projects</h2>
+    <div class="project-vertical">
+      <div class="project-card">
+        <h3>Design of Injector Assembly</h3>
+        <p>Created a 3D-printed housing for a medical injector using SolidWorks. Validated design with FEA.</p>
+        <p><strong>Tools:</strong> SolidWorks, ANSYS</p>
+      </div>
+      <div class="project-card">
+        <h3>Autonomous Drone Navigation</h3>
+        <p>Simulated obstacle detection and route planning using LIDAR and ROS in Python.</p>
+        <p><strong>Tools:</strong> Python, ROS</p>
+      </div>
+      <div class="project-card">
+        <h3>Heat Exchanger Modeling</h3>
+        <p>Built a dynamic MATLAB model to optimize heat exchange system performance under varying inputs.</p>
+        <p><strong>Tools:</strong> MATLAB, Excel</p>
+      </div>
+    </div>
+  </section>
 
-  
-<!-- 🛠️ Skills -->
+  <!-- 🛠️ Skills -->
   <section id="skills" data-aos="fade-up" data-aos-duration="1000">
     <h2>Skills</h2>
     <ul class="skills-grid">
@@ -182,12 +187,14 @@
       <li>Fusion 360</li><li>ANSYS</li><li>AutoCAD</li><li>GD&T</li>
     </ul>
   </section>
-<!-- 📄 Resume -->
+
+  <!-- 📄 Resume -->
   <section id="resume" data-aos="fade-up" data-aos-duration="1000">
     <h2>Resume</h2>
     <a href="assets/pdf/resume.pdf" class="btn" download>Download Resume</a>
   </section>
-<!-- 📬 Contact Icons -->
+
+  <!-- 📬 Contact Icons -->
   <section id="contact" data-aos="fade-up" data-aos-duration="1000">
     <h2>Contact</h2>
     <div class="contact-icons">
@@ -202,21 +209,22 @@
   <script>
     AOS.init({ once: true });
   </script>
+
   <!-- 📩 Contact Form -->
-<section id="get-in-touch" data-aos="fade-up" data-aos-duration="1000">
-  <h2>Get in Touch</h2>
-  <form action="https://formsubmit.co/004princeprajapati@gmail.com" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  <section id="get-in-touch" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Get in Touch</h2>
+    <form action="https://formsubmit.co/004princeprajapati@gmail.com" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
 
-    <!-- Optional hidden fields -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://princeprajapati04.github.io/thanks.html">
+      <!-- Optional hidden fields -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://princeprajapati04.github.io/thanks.html">
 
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</section>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
 </body>
-
 </html>
